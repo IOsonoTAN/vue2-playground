@@ -1,18 +1,17 @@
 <template>
   <div id="app">
-    <app-registration></app-registration>
-    <app-registrations></app-registrations>
+    <div class="links">
+      <router-link to='/'>Homepage</router-link>
+      <router-link to='/comments'>Comments</router-link>
+      <router-link to='/registration'>Registration</router-link>
+    </div>
+    <router-view></router-view>
   </div>
 </template>
 
-<script>
-import Registration from './components/Registration'
-import Registrations from './components/Registrations'
-
-export default {
-  components: {
-    appRegistration: Registration,
-    appRegistrations: Registrations,
-  }
+<style scoped>
+.links a {
+  padding: 10px;
+  background: #DDD;
 }
-</script>
+</style>

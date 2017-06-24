@@ -10,4 +10,7 @@ export default {
 	totalRegistrations(state) {
 		return state.registrations.length
 	},
+	comments(state) {
+		return state.comments
+	},
 }

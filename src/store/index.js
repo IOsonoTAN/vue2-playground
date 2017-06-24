@@ -8,6 +8,7 @@ Vue.use(Vuex)
 
 export const store = new Vuex.Store({
 	state: {
+		comments: [],
 		registrations: [],
 		users: [
 			{id: 1, name: 'Max', registered: false},

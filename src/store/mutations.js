@@ -19,5 +19,17 @@ export default {
 		})
 		user.registered = false
 		state.registrations.splice(state.registrations.indexOf(registration), 1)
+	},
+	getComments(state, { body }) {
+		state.comments = body
+	},
+	removeComments(state, payload) {
+		state.comments = []
+	},
+	removeComment(state, payload) {
+		const comment = state.comments.find(comment => {
+			return comment.id == payload.id
+		})
+		state.comments.splice(state.comments.indexOf(comment), 1)
 	}
 }
